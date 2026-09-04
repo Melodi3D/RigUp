@@ -1,4 +1,4 @@
-RigUp
+## RigUp
 A Maya-based biped auto-rigging tool designed to streamline character rig creation and setup.
 
 Software Used
