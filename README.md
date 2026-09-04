@@ -11,7 +11,7 @@ Autodesk Maya 2025 • Python • PySide6 • Qt Designer • Adobe Photoshop
 # Goals
 The goal of this project is to create a modular biped auto-rigging tool for Autodesk Maya that isdesigned to streamline character rig creation. It automates repetitive rigging tasks while generating organized, animator-friendly control systems that can be adapted to a variety of humanoid characters.
 
-Features:
+# Planned Features:
 • 
 • 
 # Documentation
