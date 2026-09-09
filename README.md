@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="ripupicon.png" width="250" alt="rigup Logo">
+  <img src="icons/ripupicon.png" width="250" alt="rigup Logo">
 </p>
 
 # RigUp
