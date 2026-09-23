@@ -349,9 +349,13 @@ def create_torso_joints():
 
 def create_arm_joints():
     """Builds skeleton at the location of guide locators."""
-    # R arm
+    # R Arm
 
-    # L arm
+    # R Elbow
+
+    # L Arm
+
+    # L Elbow
 
 def create_leg_joints():
     """Builds skeleton at the location of guide locators."""
