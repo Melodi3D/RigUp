@@ -313,25 +313,98 @@ def create_all_guides():
 ########################################################################################################################
 def create_head_joints():
     """Builds skeleton at the location of guide locators."""
+    # CN Head
+
+    # L Eye
+
+    # R Eye
+
+    # CN Jaw
 
 def create_neck_joints():
     """Builds skeleton at the location of guide locators."""
+    # CN Neck 01
+
+    # CN Neck 02
+
+    # CN Neck 03
 
 def create_torso_joints():
     """Builds skeleton at the location of guide locators."""
+    # CN Spine 01
+
+    # CN Spine 02
+
+    # CN Spine 03
+
+    # CN Spine 04
+
+    # CN Spine 05
+
+    # CN Spine 06
+
+    # CN Spine 07
+
+    # CN Spine 08
 
 def create_arm_joints():
     """Builds skeleton at the location of guide locators."""
+    # R arm
+
+    # L arm
 
 def create_leg_joints():
     """Builds skeleton at the location of guide locators."""
+    # R leg
+
+    # R Knee
+
+    # R Ankle
+
+    # R Foot 01
+
+    # R Foot 02
+
+    # R Foot 03
+
+    # L leg
+
+    # L Knee
+
+    # L Ankle
+
+    # L Foot 01
+
+    # L Foot 02
+
+    # L Foot 03
+
 
 def create_hand_joints():
     """Builds skeleton at the location of guide locators."""
-    
     # R Hand
-    
-    # Index 
+
+    # R Index
+
+    # R Ring
+
+    # R Thumb
+
+    # R Pinky
+
+    # R Middle
+
+    # L Hand
+
+    # L Index
+
+    # L Ring
+
+    # L Thumb
+
+    # L Pinky
+
+    # L Middle
     cmds.matchTransform('')
     hands = cmds.joint(p=(0, 0, 0))
 
