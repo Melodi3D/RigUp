@@ -307,7 +307,6 @@ def create_all_guides():
     create_leg_guides()
     create_hand_guides()
 
-
 ########################################################################################################################
 # Skeleton Creation
 ########################################################################################################################
@@ -349,17 +348,17 @@ def create_torso_joints():
 
 def create_arm_joints():
     """Builds skeleton at the location of guide locators."""
-    # R Arm
+    # R Shoulder
 
     # R Elbow
 
-    # L Arm
+    # L Shoulder
 
     # L Elbow
 
 def create_leg_joints():
     """Builds skeleton at the location of guide locators."""
-    # R leg
+    # R Leg
 
     # R Knee
 
@@ -371,7 +370,7 @@ def create_leg_joints():
 
     # R Foot 03
 
-    # L leg
+    # L Leg
 
     # L Knee
 
@@ -382,7 +381,6 @@ def create_leg_joints():
     # L Foot 02
 
     # L Foot 03
-
 
 def create_hand_joints():
     """Builds skeleton at the location of guide locators."""
@@ -404,13 +402,15 @@ def create_hand_joints():
 
     # L Ring
 
-    # L Thumb
+    # L Middle
 
     # L Pinky
 
-    # L Middle
-    cmds.matchTransform('')
-    hands = cmds.joint(p=(0, 0, 0))
+    # L Thumb
+    cmds.select(clear=True)
+    l_thumb_04_jnt = cmds.joint()
+    cmds.matchTransform(l_thumb_04_jnt, l_thumb_04_guide)
+    cmds.rename('joint1', 'l_thumb_04_jnt')[0]
 
 def build_skeleton():
     """Builds skeleton at the location of guide locators."""
