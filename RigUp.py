@@ -311,38 +311,113 @@ def create_all_guides():
 def create_head_joints():
     """Builds skeleton at the location of guide locators."""
     # CN Head
+    cmds.select(clear=True)
 
+    cn_head_guide_pos = cmds.xform('cn_head_guide', worldSpace=True, q=True, translation=True)
+
+    cn_head_jnt = cmds.joint(name='cn_head_jnt', position=cn_head_guide_pos)    
+    
     # L Eye
+    cmds.select(clear=True)
+
+    l_eye_guide_pos = cmds.xform('l_eye_guide', worldSpace=True, q=True, translation=True)
+
+    l_eye_jnt = cmds.joint(name='l_eye_jnt', position=l_eye_guide_pos)    
 
     # R Eye
+    cmds.select(clear=True)
+
+    r_eye_guide_pos = cmds.xform('r_eye_guide', worldSpace=True, q=True, translation=True)
+
+    r_eye_jnt = cmds.joint(name='r_eye_jnt', position=r_eye_guide_pos)  
 
     # CN Jaw
+    cmds.select(clear=True)
+
+    cn_jaw_guide_pos = cmds.xform('cn_jaw_guide', worldSpace=True, q=True, translation=True)
+
+    cn_jaw_jnt = cmds.joint(name='cn_jaw_jnt', position=cn_jaw_guide_pos)    
 
 def create_neck_joints():
     """Builds skeleton at the location of guide locators."""
     # CN Neck 01
+    cmds.select(clear=True)
 
+    cn_neck_01_guide_pos = cmds.xform('cn_neck_01_guide', worldSpace=True, q=True, translation=True)
+
+    cn_neck_01_jnt = cmds.joint(name='cn_neck_01_jnt', position=cn_neck_01_guide_pos)    
+    
     # CN Neck 02
+    cmds.select(clear=True)
 
+    cn_neck_02_guide_pos = cmds.xform('cn_neck_02_guide', worldSpace=True, q=True, translation=True)
+
+    cn_neck_02_jnt = cmds.joint(name='cn_neck_02_jnt', position=cn_neck_02_guide_pos)    
+    
     # CN Neck 03
+    cmds.select(clear=True)
+
+    cn_neck_03_guide_pos = cmds.xform('cn_neck_03_guide', worldSpace=True, q=True, translation=True)
+
+    cn_neck_03_jnt = cmds.joint(name='cn_neck_03_jnt', position=cn_neck_03_guide_pos)        
 
 def create_torso_joints():
     """Builds skeleton at the location of guide locators."""
     # CN Spine 01
+    cmds.select(clear=True)
 
+    cn_spine_01_guide_pos = cmds.xform('cn_spine_01_guide', worldSpace=True, q=True, translation=True)
+
+    cn_spine_01_jnt = cmds.joint(name='cn_spine_01_jnt', position=cn_spine_01_guide_pos)    
+    
     # CN Spine 02
+    cmds.select(clear=True)
 
+    cn_spine_02_guide_pos = cmds.xform('cn_spine_02_guide', worldSpace=True, q=True, translation=True)
+
+    cn_spine_02_jnt = cmds.joint(name='cn_spine_02_jnt', position=cn_spine_02_guide_pos)    
+    
     # CN Spine 03
+    cmds.select(clear=True)
 
+    cn_spine_03_guide_pos = cmds.xform('cn_spine_03_guide', worldSpace=True, q=True, translation=True)
+
+    cn_spine_03_jnt = cmds.joint(name='cn_spine_03_jnt', position=cn_spine_03_guide_pos)    
+    
     # CN Spine 04
+    cmds.select(clear=True)
 
+    cn_spine_04_guide_pos = cmds.xform('cn_spine_04_guide', worldSpace=True, q=True, translation=True)
+
+    cn_spine_04_jnt = cmds.joint(name='cn_spine_04_jnt', position=cn_spine_04_guide_pos)    
+    
     # CN Spine 05
+    cmds.select(clear=True)
+
+    cn_spine_05_guide_pos = cmds.xform('cn_spine_05_guide', worldSpace=True, q=True, translation=True)
+
+    cn_spine_05_jnt = cmds.joint(name='cn_spine_05_jnt', position=cn_spine_05_guide_pos)        
 
     # CN Spine 06
+    cmds.select(clear=True)
 
+    cn_spine_06_guide_pos = cmds.xform('cn_spine_06_guide', worldSpace=True, q=True, translation=True)
+
+    cn_spine_06_jnt = cmds.joint(name='cn_spine_06_jnt', position=cn_spine_06_guide_pos)    
+    
     # CN Spine 07
+    cmds.select(clear=True)
 
+    cn_spine_07_guide_pos = cmds.xform('cn_spine_07_guide', worldSpace=True, q=True, translation=True)
+
+    cn_spine_07_jnt = cmds.joint(name='cn_spine_07_jnt', position=cn_spine_07_guide_pos)    
+    
     # CN Spine 08
+    cmds.select(clear=True)
+
+    cn_spine_08_guide_pos = cmds.xform('cn_spine_08_guide', worldSpace=True, q=True, translation=True)
+
+    cn_spine_08_jnt = cmds.joint(name='cn_spine_08_jnt', position=cn_spine_08_guide_pos)    
 
 def create_arm_joints():
     """Builds skeleton at the location of guide locators."""
@@ -471,6 +546,14 @@ def create_leg_joints():
 def create_hand_joints():
     """Builds skeleton at the location of guide locators."""
     # R Hand Joints
+    
+    # R Wrist
+    cmds.select(clear=True)
+    r_wrist_guide_pos = cmds.xform('r_wrist_guide', worldSpace=True, q=True, translation=True)
+
+    r_wrist_jnt = cmds.joint(name='r_wrist_jnt', position=r_wrist_guide_pos)
+
+    cmds.select(clear=True)    
 
     # R Index
     cmds.select(clear=True)
@@ -598,6 +681,14 @@ def create_hand_joints():
     r_middle_04_jnt = cmds.joint(name='r_middle_04_jnt', position=r_middle_04_guide_pos)
 
     # L Hand Joints
+    
+    # L Wrist
+    cmds.select(clear=True)   
+    l_wrist_guide_pos = cmds.xform('l_wrist_guide', worldSpace=True, q=True, translation=True)
+
+    l_wrist_jnt = cmds.joint(name='l_wrist_jnt', position=l_wrist_guide_pos)
+
+    cmds.select(clear=True)    
  
     # L Index
     cmds.select(clear=True)
