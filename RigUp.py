@@ -421,6 +421,18 @@ def create_torso_joints():
 
 def create_arm_joints():
     """Builds skeleton at the location of guide locators."""
+    # R Clavicle 01
+    cmds.select(clear=True)
+    r_clavicle_01_guide_pos = cmds.xform('r_clavicle_01_guide', worldSpace=True, q=True, translation=True)
+
+    r_clavicle_01_jnt = cmds.joint(name='r_clavicle_01_jnt', position=r_clavicle_01_guide_pos)
+    
+    # R Clavicle 02
+    cmds.select(clear=True)
+    r_clavicle_02_guide_pos = cmds.xform('r_clavicle_02_guide', worldSpace=True, q=True, translation=True)
+
+    r_clavicle_02_jnt = cmds.joint(name='r_clavicle_02_jnt', position=r_clavicle_02_guide_pos)    
+    
     # R Shoulder
     cmds.select(clear=True)
 
@@ -434,7 +446,19 @@ def create_arm_joints():
     r_elbow_guide_pos = cmds.xform('r_elbow_guide', worldSpace=True, q=True, translation=True)
 
     r_elbow_jnt = cmds.joint(name='r_elbow_jnt', position=r_elbow_guide_pos)
+    
+    # L Clavicle 01
+    cmds.select(clear=True)
+    l_clavicle_01_guide_pos = cmds.xform('l_clavicle_01_guide', worldSpace=True, q=True, translation=True)
 
+    l_clavicle_01_jnt = cmds.joint(name='l_clavicle_01_jnt', position=l_clavicle_01_guide_pos)
+    
+    # L Clavicle 02
+    cmds.select(clear=True)
+    l_clavicle_02_guide_pos = cmds.xform('l_clavicle_02_guide', worldSpace=True, q=True, translation=True)
+
+    l_clavicle_02_jnt = cmds.joint(name='l_clavicle_02_jnt', position=l_clavicle_02_guide_pos)
+    
     # L Shoulder
     cmds.select(clear=True)
 
