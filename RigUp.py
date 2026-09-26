@@ -850,18 +850,40 @@ def build_skeleton():
     
 def parent_head_joints():
     """Parents head joints to create skeletal hiearchy"""
-    
+    # L
     cmds.parent('l_eye_jnt', 'cn_head_jnt')
-    # L 
+    
     # R
-
+    cmds.parent('r_eye_jnt', 'cn_head_jnt')
+    
+    # CN Jaw
+    cmds.parent('cn_jaw_jnt', 'cn_head_jnt')
+    
 def parent_neck_joints():
     """Parents head joints to create skeletal hiearchy"""
-    #
+    # CN Neck
+    cmds.parent('cn_head_jnt', 'cn_neck_03_jnt')
+    
+    cmds.parent('cn_neck_03_jnt', 'cn_neck_02_jnt')
+    
+    cmds.parent('cn_neck_02_jnt', 'cn_neck_01_jnt')
     
 def parent_torso_joints():
     """Parents torso joints to create skeletal hiearchy"""
-    #
+    # CN Spine
+    cmds.parent('cn_spine_02_jnt', 'cn_spine_01_jnt')
+    
+    cmds.parent('cn_spine_03_jnt', 'cn_spine_02_jnt')
+    
+    cmds.parent('cn_spine_04_jnt', 'cn_spine_03_jnt')
+    
+    cmds.parent('cn_spine_05_jnt', 'cn_spine_04_jnt')
+    
+    cmds.parent('cn_spine_06_jnt', 'cn_spine_05_jnt')
+    
+    cmds.parent('cn_spine_07_jnt', 'cn_spine_06_jnt')
+    
+    cmds.parent('cn_spine_08_jnt', 'cn_spine_07_jnt')
     
 def parent_arm_joints():
     """Parents arm joints to create skeletal hiearchy"""
