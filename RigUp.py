@@ -162,7 +162,7 @@ def create_hand_guides():
 
     # Index
     l_index_01_guide = cmds.spaceLocator(name='l_index_01_guide')[0]
-    cmds.xform(l_index_01_guide, ws=True, t=(2.442, 4.922, -0.067))
+    cmds.xform(l_index_01_guide, ws=True, t=(2.428, 4.913, 0.112))
 
     l_index_02_guide = cmds.spaceLocator(name='l_index_02_guide')[0]
     cmds.xform(l_index_02_guide, ws=True, t=(2.537,4.913, 0.134))
@@ -885,18 +885,93 @@ def parent_torso_joints():
     
     cmds.parent('cn_spine_08_jnt', 'cn_spine_07_jnt')
     
+    #L Clavicle
+    cmds.parent('l_clavicle_02_jnt', 'l_clavicle_01_jnt')    
+    
+    #R Clavicle
+    cmds.parent('r_clavicle_02_jnt', 'r_clavicle_01_jnt')  
+    
 def parent_arm_joints():
     """Parents arm joints to create skeletal hiearchy"""
-    #
+    # L Arm
+    cmds.parent('l_elbow_jnt', 'l_shoulder_jnt')  
+    
+    cmds.parent('l_wrist_jnt', 'l_elbow_jnt')  
+    
+    # R Arm
+    cmds.parent('r_elbow_jnt', 'r_shoulder_jnt')  
+    
+    cmds.parent('r_wrist_jnt', 'r_elbow_jnt')  
     
 def parent_leg_joints():
     """Parents leg joints to create skeletal hiearchy"""
-    #
+    # L Leg
+    cmds.parent('l_knee_jnt', 'l_leg_jnt')  
+    cmds.parent('l_ankle_jnt', 'l_knee_jnt')  
+    cmds.parent('l_foot_02_jnt', 'l_foot_01_jnt')    
+    cmds.parent('l_foot_03_jnt', 'l_foot_02_jnt')    
     
+    # R Leg
+    cmds.parent('r_knee_jnt', 'r_leg_jnt')  
+    cmds.parent('r_ankle_jnt', 'r_knee_jnt')  
+    cmds.parent('r_foot_02_jnt', 'r_foot_01_jnt')    
+    cmds.parent('r_foot_03_jnt', 'r_foot_02_jnt') 
+    cmds.parent('r_ankle_jnt', 'r_knee_jnt')  
+        
 def parent_hand_joints():
     """Parents leg joints to create skeletal hiearchy"""
-    #
-
+    #L Hand
+    cmds.parent('l_thumb_01_jnt', 'l_wrist_jnt')  
+    cmds.parent('l_thumb_02_jnt', 'l_thumb_01_jnt')  
+    cmds.parent('l_thumb_03_jnt', 'l_thumb_02_jnt')  
+    cmds.parent('l_thumb_04_jnt', 'l_thumb_03_jnt') 
+    
+    cmds.parent('l_index_01_jnt', 'l_wrist_jnt')  
+    cmds.parent('l_index_02_jnt', 'l_index_01_jnt')  
+    cmds.parent('l_index_03_jnt', 'l_index_02_jnt')  
+    cmds.parent('l_index_04_jnt', 'l_index_03_jnt') 
+    
+    cmds.parent('l_middle_01_jnt', 'l_wrist_jnt')  
+    cmds.parent('l_middle_02_jnt', 'l_middle_01_jnt')  
+    cmds.parent('l_middle_03_jnt', 'l_middle_02_jnt')  
+    cmds.parent('l_middle_04_jnt', 'l_middle_03_jnt') 
+    
+    cmds.parent('l_ring_01_jnt', 'l_wrist_jnt')  
+    cmds.parent('l_ring_02_jnt', 'l_ring_01_jnt')  
+    cmds.parent('l_ring_03_jnt', 'l_ring_02_jnt')  
+    cmds.parent('l_ring_04_jnt', 'l_ring_03_jnt') 
+    
+    cmds.parent('l_pinky_01_jnt', 'l_wrist_jnt')  
+    cmds.parent('l_pinky_02_jnt', 'l_pinky_01_jnt')  
+    cmds.parent('l_pinky_03_jnt', 'l_pinky_02_jnt')  
+    cmds.parent('l_pinky_04_jnt', 'l_pinky_03_jnt')     
+    
+    #R Hand
+    cmds.parent('r_thumb_01_jnt', 'r_wrist_jnt')  
+    cmds.parent('r_thumb_02_jnt', 'r_thumb_01_jnt')  
+    cmds.parent('r_thumb_03_jnt', 'r_thumb_02_jnt')  
+    cmds.parent('r_thumb_04_jnt', 'r_thumb_03_jnt') 
+    
+    cmds.parent('r_index_01_jnt', 'r_wrist_jnt')  
+    cmds.parent('r_index_02_jnt', 'r_index_01_jnt')  
+    cmds.parent('r_index_03_jnt', 'r_index_02_jnt')  
+    cmds.parent('r_index_04_jnt', 'r_index_03_jnt') 
+    
+    cmds.parent('r_middle_01_jnt', 'r_wrist_jnt')  
+    cmds.parent('r_middle_02_jnt', 'r_middle_01_jnt')  
+    cmds.parent('r_middle_03_jnt', 'r_middle_02_jnt')  
+    cmds.parent('r_middle_04_jnt', 'r_middle_03_jnt') 
+    
+    cmds.parent('r_ring_01_jnt', 'r_wrist_jnt')  
+    cmds.parent('r_ring_02_jnt', 'r_ring_01_jnt')  
+    cmds.parent('r_ring_03_jnt', 'r_ring_02_jnt')  
+    cmds.parent('r_ring_04_jnt', 'r_ring_03_jnt') 
+    
+    cmds.parent('r_pinky_01_jnt', 'r_wrist_jnt')  
+    cmds.parent('r_pinky_02_jnt', 'r_pinky_01_jnt')  
+    cmds.parent('r_pinky_03_jnt', 'r_pinky_02_jnt')  
+    cmds.parent('r_pinky_04_jnt', 'r_pinky_03_jnt')     
+    
 
 def parent_skeleton():
     """Parents hand joints to create skeletal hiearchy"""
@@ -917,4 +992,3 @@ create_all_guides()
 build_skeleton()
 
 parent_skeleton()
-
