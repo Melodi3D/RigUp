@@ -72,7 +72,7 @@ def create_torso_guides():
     cmds.xform(cn_spine_06_guide, ws=True, t=(0.002, 4.419, 0.041))
 
     cn_spine_07_guide = cmds.spaceLocator(name='cn_spine_07_guide')[0]
-    cmds.xform(cn_spine_07_guide, ws=True, t=(0.002, 4.826, 0.041))
+    cmds.xform(cn_spine_07_guide, ws=True, t=(0.002, 4.650, 0.041))
 
     cn_spine_08_guide = cmds.spaceLocator(name='cn_spine_08_guide')[0]
     cmds.xform(cn_spine_08_guide, ws=True, t=(0.002, 4.826, 0.041))
@@ -915,8 +915,7 @@ def parent_leg_joints():
     cmds.parent('r_knee_jnt', 'r_leg_jnt')  
     cmds.parent('r_ankle_jnt', 'r_knee_jnt')  
     cmds.parent('r_foot_02_jnt', 'r_foot_01_jnt')    
-    cmds.parent('r_foot_03_jnt', 'r_foot_02_jnt') 
-    cmds.parent('r_ankle_jnt', 'r_knee_jnt')  
+    cmds.parent('r_foot_03_jnt', 'r_foot_02_jnt')  
         
 def parent_hand_joints():
     """Parents leg joints to create skeletal hiearchy"""
@@ -972,7 +971,6 @@ def parent_hand_joints():
     cmds.parent('r_pinky_03_jnt', 'r_pinky_02_jnt')  
     cmds.parent('r_pinky_04_jnt', 'r_pinky_03_jnt')     
     
-
 def parent_skeleton():
     """Parents joints to create skeletal hiearchy"""
     parent_head_joints()
@@ -987,52 +985,102 @@ def parent_skeleton():
     
     parent_hand_joints()
     
+def orient_neck_01_jnt():
+    cmds.joint('cn_neck_01_jnt', e=True, oj='xzy', sao='zup', ch=True)
     
-def orient_neck_01_joint():
-        cmds.joint(
-        'cn_neck_01_jnt',
-        e=True,
-        oj='xzy',
-        sao='zup',
-        ch=True
-    )
-        
-def orient_r_clavicle_01_jnt():
-        
-def orient_r_shoulder_jnt():
-        
-def orient_l_clavicle_01_jnt():
-        
-def orient_l_shoulder_jnt():
-        
-def orient_r_leg_jnt():
-        
-def orient_r_foot_01_jnt():
-        
-def orient_l_leg_jnt():
-        
-def orient_l_foot_01_jnt():
+def orient_cn_spine_01_jnt():
+    cmds.joint('cn_spine_01_jnt', e=True, oj='xzy', sao='zup', ch=True)    
 
+def orient_r_clavicle_01_jnt():
+    cmds.joint('r_clavicle_01_jnt', e=True, oj='xzy', sao='zup', ch=True)
+    
+def orient_r_shoulder_jnt():
+    cmds.joint('r_shoulder_jnt', e=True, oj='xzy', sao='zup', ch=True)
+       
+def orient_l_thumb_01_jnt():
+    cmds.joint('l_thumb_01_jnt', e=True, oj='xyz', sao='zup', ch=True)    
+    
+def orient_l_index_01_jnt():
+    cmds.joint('l_index_01_jnt', e=True, oj='xzy', sao='zup', ch=True)  
+    
+def orient_l_middle_01_jnt():
+    cmds.joint('l_middle_01_jnt', e=True, oj='xzy', sao='zup', ch=True)  
+    
+def orient_l_ring_01_jnt():
+    cmds.joint('l_ring_01_jnt', e=True, oj='xzy', sao='zup', ch=True)  
+    
+def orient_l_pinky_01_jnt():
+    cmds.joint('l_pinky_01_jnt', e=True, oj='xzy', sao='zup', ch=True)  
+    
+def orient_l_wrist_jnt():
+    cmds.joint('l_wrist_jnt', e=True, oj='none', sao='zup', ch=False)   
+    
+def orient_l_clavicle_01_jnt():
+    cmds.joint('l_clavicle_01_jnt', e=True, oj='xzy', sao='zup', ch=True)
+    
+def orient_l_shoulder_jnt():
+    cmds.joint('l_shoulder_jnt', e=True, oj='xzy', sao='zup', ch=True)
+    
+def orient_l_eye_jnt():
+    cmds.joint('l_eye_jnt', e=True, oj='none', sao='zup', ch=False)
+    
+def orient_r_eye_jnt():
+    cmds.joint('r_eye_jnt', e=True, oj='none', sao='zup', ch=False)
+    
+def orient_r_leg_jnt():
+    cmds.joint('r_leg_jnt', e=True, oj='xzy', sao='zup', ch=True)
+    
+def orient_cn_jaw_jnt():
+    cmds.joint('cn_jaw_jnt', e=True, oj='none', sao='zup', ch=False)
+    
+def orient_r_foot_01_jnt():
+    cmds.joint('r_foot_01_jnt', e=True, oj='xzy', sao='zup', ch=True)
+    
+def orient_l_leg_jnt():
+    cmds.joint('l_leg_jnt', e=True, oj='xzy', sao='zup', ch=True)
+    
+def orient_l_foot_01_jnt():
+    cmds.joint('l_foot_01_jnt', e=True, oj='xzy', sao='zup', ch=True)
+    
 def oriented_joints():
     """Orient joints to create oriented joint hiearchy"""
-        orient_neck_01_joint()
-        
-        orient_r_clavicle_01_jnt()
-        
-        orient_r_shoulder_jnt()
-        
-        orient_l_clavicle_01_jnt()
-        
-        orient_l_shoulder_jnt()
-        
-        orient_r_leg_jnt()
-        
-        orient_r_foot_01_jnt()
-        
-        orient_l_leg_jnt()
-        
-        orient_l_foot_01_jnt()
+    orient_neck_01_jnt()
     
+    orient_l_eye_jnt()
+    
+    orient_r_eye_jnt()
+    
+    orient_cn_jaw_jnt()
+    
+    orient_cn_spine_01_jnt()
+    
+    orient_r_clavicle_01_jnt()
+    
+    orient_r_shoulder_jnt()
+    
+    orient_l_clavicle_01_jnt()
+    
+    orient_l_shoulder_jnt()
+    
+    orient_r_leg_jnt()
+    
+    orient_r_foot_01_jnt()
+    
+    orient_l_leg_jnt()
+    
+    orient_l_foot_01_jnt()
+    
+    orient_l_wrist_jnt() 
+    
+    orient_l_thumb_01_jnt() 
+    
+    orient_l_index_01_jnt() 
+    
+    orient_l_middle_01_jnt() 
+    
+    orient_l_ring_01_jnt() 
+    
+    orient_l_pinky_01_jnt() 
     
 create_all_guides()
 
