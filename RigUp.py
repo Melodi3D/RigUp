@@ -974,7 +974,7 @@ def parent_hand_joints():
     
 
 def parent_skeleton():
-    """Parents hand joints to create skeletal hiearchy"""
+    """Parents joints to create skeletal hiearchy"""
     parent_head_joints()
     
     parent_neck_joints()
@@ -987,8 +987,57 @@ def parent_skeleton():
     
     parent_hand_joints()
     
+    
+def orient_neck_01_joint():
+        cmds.joint(
+        'cn_neck_01_jnt',
+        e=True,
+        oj='xzy',
+        sao='zup',
+        ch=True
+    )
+        
+def orient_r_clavicle_01_jnt():
+        
+def orient_r_shoulder_jnt():
+        
+def orient_l_clavicle_01_jnt():
+        
+def orient_l_shoulder_jnt():
+        
+def orient_r_leg_jnt():
+        
+def orient_r_foot_01_jnt():
+        
+def orient_l_leg_jnt():
+        
+def orient_l_foot_01_jnt():
+
+def oriented_joints():
+    """Orient joints to create oriented joint hiearchy"""
+        orient_neck_01_joint()
+        
+        orient_r_clavicle_01_jnt()
+        
+        orient_r_shoulder_jnt()
+        
+        orient_l_clavicle_01_jnt()
+        
+        orient_l_shoulder_jnt()
+        
+        orient_r_leg_jnt()
+        
+        orient_r_foot_01_jnt()
+        
+        orient_l_leg_jnt()
+        
+        orient_l_foot_01_jnt()
+    
+    
 create_all_guides()
 
 build_skeleton()
 
 parent_skeleton()
+
+oriented_joints()
