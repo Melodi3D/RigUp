@@ -16,7 +16,7 @@ The goal of this project is to create a modular biped auto-rigging tool for Auto
 
 • Skeleton Hiearchy ✓
 
-• Joint Orientation
+• Joint Orientation ✓
 
 • Control Generation
 
