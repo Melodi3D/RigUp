@@ -52,7 +52,7 @@ The goal of this project is to create a modular biped auto-rigging tool for Auto
 
 • Rig Stress Testing
 
-# Work In Progress
+# Automated Rig Hierarchy — RigUp Development
 <p align="center">
   <img src="media/workinprogressrigup.png" width="2000" alt="workinprogressrigup">
 </p>
