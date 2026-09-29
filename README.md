@@ -52,6 +52,7 @@ The goal of this project is to create a modular biped auto-rigging tool for Auto
 
 • Rig Stress Testing
 
+# Work In Progress
 <p align="center">
   <img src="media/workinprogressrigup.png" width="2000" alt="workinprogressrigup">
 </p>
