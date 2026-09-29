@@ -132,6 +132,7 @@ def create_joints():
     for section, guides in character_rig_guides.items():
         
         for guide_name in guides:
+            
             joint_name = guide_name.replace("_guide", "_jnt")
     
             position = cmds.xform(
@@ -147,7 +148,7 @@ def create_joints():
             name=joint_name,
             position=position
             )
-            
+
 def parent_head_joints():
     """Parents head joints to create skeletal hiearchy"""
     # L
@@ -274,17 +275,17 @@ def parent_hand_joints():
 def parent_skeleton():
     """Parents joints to create skeletal hiearchy"""
     parent_head_joints()
-    
+
     parent_neck_joints()
-    
+
     parent_torso_joints()
-    
+
     parent_arm_joints()
-    
+
     parent_leg_joints()
-    
-    parent_hand_joints()
-    
+
+    parent_hand_joints()    
+
 def orient_neck_01_jnt():
     cmds.joint('cn_neck_01_jnt', e=True, oj='xzy', sao='zup', ch=True)
     
@@ -381,11 +382,3 @@ def oriented_joints():
     orient_l_ring_01_jnt() 
     
     orient_l_pinky_01_jnt() 
-    
-create_all_guides()
-
-build_skeleton()
-
-parent_skeleton()
-
-oriented_joints()
