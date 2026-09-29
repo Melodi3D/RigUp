@@ -382,3 +382,11 @@ def oriented_joints():
     orient_l_ring_01_jnt() 
     
     orient_l_pinky_01_jnt() 
+    
+create_guides()
+
+create_joints()
+
+parent_skeleton()
+
+oriented_joints()
