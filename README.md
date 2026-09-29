@@ -42,8 +42,6 @@ The goal of this project is to create a modular biped auto-rigging tool for Auto
 
 • IK/FK Matching
 
-• Rig Hierarchy
-
 • Attribute Management
 
 • Skinning & Deformation Setup
