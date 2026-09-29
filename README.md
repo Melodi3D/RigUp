@@ -14,9 +14,11 @@ The goal of this project is to create a modular biped auto-rigging tool for Auto
 # Planned Features:
 • Guide Creation ✓
 
-• Skeleton Hiearchy ✓
+• Skeleton Hierarchy ✓
 
 • Joint Orientation ✓
+
+• Rig Hierarchy ✓
 
 • Control Generation
 
