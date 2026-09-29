@@ -383,10 +383,62 @@ def oriented_joints():
     
     orient_l_pinky_01_jnt() 
     
+
+def create_ctrls():
+    '''Creates ctrls at the position of joints'''
+    cmds.group(em=True, name='Character_Rig')
+
+    cmds.group(em=True, name='Geo_GRP')
+
+    cmds.group(em=True, name='Skeleton_GRP')
+
+    cmds.group(em=True, name='Ctrl_GRP')
+    
+    cmds.group(em=True, name='Misc_GRP')
+    
+    cmds.group(em=True, name='Guides_GRP')
+
+    cmds.parent('Geo_GRP', 'Character_Rig')
+    
+    cmds.parent('Skeleton_GRP', 'Character_Rig')
+    
+    cmds.parent('Ctrl_GRP', 'Character_Rig')
+    
+    cmds.parent('Misc_GRP', 'Character_Rig')
+    
+    cmds.parent('Guides_GRP', 'Misc_GRP')
+    
+    cmds.parent('cn_spine_01_jnt', 'Skeleton_GRP')
+    
+    cmds.parent('l_leg_jnt', 'Skeleton_GRP')
+    
+    cmds.parent('l_foot_01_jnt', 'Skeleton_GRP')
+    
+    cmds.parent('r_leg_jnt', 'Skeleton_GRP')
+    
+    cmds.parent('r_foot_01_jnt', 'Skeleton_GRP')
+    
+    cmds.parent('l_shoulder_jnt', 'Skeleton_GRP')
+    
+    cmds.parent('l_clavicle_01_jnt', 'Skeleton_GRP')
+    
+    cmds.parent('r_clavicle_01_jnt', 'Skeleton_GRP')
+    
+    cmds.parent('cn_neck_01_jnt', 'Skeleton_GRP')
+    
+    cmds.parent('r_shoulder_jnt', 'Skeleton_GRP')
+    
+    for section in character_rig_guides:
+        for guide_name in character_rig_guides[section]:
+            if guide_name.endswith("_guide"):
+                cmds.parent(guide_name, 'Guides_GRP')
+        
 create_guides()
 
-create_joints()
+build_skeleton()
 
 parent_skeleton()
 
 oriented_joints()
+
+create_ctrls()
