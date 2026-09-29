@@ -197,12 +197,16 @@ def parent_arm_joints():
     # L Arm
     cmds.parent('l_elbow_jnt', 'l_shoulder_jnt')  
     
-    cmds.parent('l_wrist_jnt', 'l_elbow_jnt')  
+    cmds.parent('l_wrist_jnt', 'l_elbow_jnt')
+    
+    cmds.parent('l_shoulder_jnt', 'l_clavicle_02_jnt')   
     
     # R Arm
     cmds.parent('r_elbow_jnt', 'r_shoulder_jnt')  
     
-    cmds.parent('r_wrist_jnt', 'r_elbow_jnt')  
+    cmds.parent('r_wrist_jnt', 'r_elbow_jnt') 
+    
+    cmds.parent('r_shoulder_jnt', 'r_clavicle_02_jnt')   
     
 def parent_leg_joints():
     """Parents leg joints to create skeletal hiearchy"""
@@ -210,13 +214,17 @@ def parent_leg_joints():
     cmds.parent('l_knee_jnt', 'l_leg_jnt')  
     cmds.parent('l_ankle_jnt', 'l_knee_jnt')  
     cmds.parent('l_foot_02_jnt', 'l_foot_01_jnt')    
-    cmds.parent('l_foot_03_jnt', 'l_foot_02_jnt')    
+    cmds.parent('l_foot_03_jnt', 'l_foot_02_jnt')  
+      
+    cmds.parent('l_foot_01_jnt', 'l_ankle_jnt')  
     
     # R Leg
     cmds.parent('r_knee_jnt', 'r_leg_jnt')  
     cmds.parent('r_ankle_jnt', 'r_knee_jnt')  
     cmds.parent('r_foot_02_jnt', 'r_foot_01_jnt')    
     cmds.parent('r_foot_03_jnt', 'r_foot_02_jnt')  
+    
+    cmds.parent('r_foot_01_jnt', 'r_ankle_jnt')  
         
 def parent_hand_joints():
     """Parents leg joints to create skeletal hiearchy"""
@@ -384,8 +392,8 @@ def oriented_joints():
     orient_l_pinky_01_jnt() 
     
 
-def create_ctrls():
-    '''Creates ctrls at the position of joints'''
+def create_rig_hierarchy():
+    '''Creates rig hiearchy'''
     cmds.group(em=True, name='Character_Rig')
 
     cmds.group(em=True, name='Geo_GRP')
@@ -412,21 +420,13 @@ def create_ctrls():
     
     cmds.parent('l_leg_jnt', 'Skeleton_GRP')
     
-    cmds.parent('l_foot_01_jnt', 'Skeleton_GRP')
-    
     cmds.parent('r_leg_jnt', 'Skeleton_GRP')
-    
-    cmds.parent('r_foot_01_jnt', 'Skeleton_GRP')
-    
-    cmds.parent('l_shoulder_jnt', 'Skeleton_GRP')
     
     cmds.parent('l_clavicle_01_jnt', 'Skeleton_GRP')
     
     cmds.parent('r_clavicle_01_jnt', 'Skeleton_GRP')
     
     cmds.parent('cn_neck_01_jnt', 'Skeleton_GRP')
-    
-    cmds.parent('r_shoulder_jnt', 'Skeleton_GRP')
     
     for section in character_rig_guides:
         for guide_name in character_rig_guides[section]:
@@ -441,4 +441,4 @@ parent_skeleton()
 
 oriented_joints()
 
-create_ctrls()
+create_rig_hierarchy()
